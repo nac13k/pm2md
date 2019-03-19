@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+require "pm2md"
+
+collection_path = ARGV[0]
+postman_enviroment_path = ARGV[1]
+
+pm2md = Pm2md::PM2MDCLI.new(collection_path, postman_enviroment_path)
+pm2md.make_md
