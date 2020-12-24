@@ -26,7 +26,7 @@ module Pm2md
 
     def replace_vars(text)
       @enviroments.each do |key, val|
-        text = text.gsub("{{#{key}}}", val)
+        text = text.gsub("{{#{key}}}", val.to_s)
       end
       text
     end
